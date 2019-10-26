@@ -9,56 +9,86 @@
     <title>Document</title>
 </head>
 <body>
-    <nav class="nav">
-        <li class="nav-item">
-            <a class="nav-link active" href="#">Ejemplo PDF</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Navbar</a>
-        </li>
-    </nav>
-    <div class="col">
-    <div id="content"class="form-group">
-        <label for="my-input">Formulario</label>
-        <input class="form-control" type="text" name="nombre" id ="nombreText">
-        <div class="input-group">
-            <input id="mi id"class="form-control" type="text" name="" placeholder="Recipient's text" aria-label="Recipient's " aria-describedby="my-addon">
-            <div class="input-group-append">
-                <span class="input-group-text" id="my-addon">Text</span>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <h2 class="text-light">CRUD</h2>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="index2.html">Facturas</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">Clientes</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="productos.html">Productos</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<br>
+
+<h1>Clientes</h1>
+
+<br>
+
+<!-- Columnas -->
+
+<div class="container">
+    <div class="row">
+        <div class="col-3"></div>
+        <div class="col-6">
+
+            <!-- Fromulario -->
+
+            <form>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">ID de cliente</label>
+                    <input type="text" class="form-control" id="user_id" placeholder="ID Cliente">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Nombre de cliente</label>
+                    <input type="text" class="form-control" id="user_name" placeholder="Nombre Cliente">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Número de teléfono</label>
+                  <input type="text" class="form-control" id="user_number" placeholder="Numero Telefono">
+              </div>
+              <div class="form-group">
+                <label for="exampleInputEmail1">DNI</label>
+                <input type="text" class="form-control" id="user_dni" placeholder="DNI">
             </div>
+                <button onclick="update_user()" type="submit" class="btn btn-primary">Crear cliente</button>
+                <button onclick="delete_user()" type="submit" class="btn btn-danger">Borrar cliente</button>
+                <button onclick="imprimir()" type="submit" class="btn btn-primary">Exportar a PDF</button>
+            </form>
+        </div>
+
+        <!-- Tabla clientes -->
+
+        <div class="col_3 col-sm">
+            <table class="table" id="tbl_users_list">
+                <thead class="thead-dark">
+                    <tr>
+                        
+                        <th scope="col" onclick="delete_user()">ID</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Teléfono</th>
+                        <th scope="col">DNI</th>
+                    </tr>
+                    <tr>
+                        
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </thead>
+            </table>
         </div>
     </div>
 </div>
-<button onclick=" Imprimir()">Imprimir</button>
-<table id="mitabla"class="table">
-    <thead>
-      <tr>
-        <th scope="col">#</th>
-        <th scope="col">First</th>
-        <th scope="col">Last</th>
-        <th scope="col">Handle</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th scope="row">1</th>
-        <td>Mark</td>
-        <td>Otto</td>
-        <td>@mdo</td>
-      </tr>
-      <tr>
-        <th scope="row">2</th>
-        <td>Jacob</td>
-        <td>Thornton</td>
-        <td>@fat</td>
-      </tr>
-      <tr>
-        <th scope="row">3</th>
-        <td>Larry</td>
-        <td>the Bird</td>
-        <td>@twitter</td>
-      </tr>
-    </tbody>
   </table>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>    
     <script src="js/PDF.js"></script>
