@@ -7,6 +7,20 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script   src="https://code.jquery.com/jquery-3.3.1.min.js"   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="   crossorigin="anonymous"></script>
     <title>Document</title>
+    <script>
+        // Initialize Firebase
+var config = {
+ apiKey: "AIzaSyDcBKBYQ3Vx8J1t0XkJaYFxz6sMMX7J8r0",
+ authDomain: "proyecto-di-boostrap.firebaseapp.com",
+ databaseURL: "https://proyecto-di-boostrap.firebaseio.com",
+ projectId: "proyecto-di-boostrap",
+ storageBucket: "proyecto-di-boostrap.appspot.com",
+ messagingSenderId: "552251884631"
+  };
+
+  firebase.initializeApp(config); 
+ </script>
+  <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
 </head>
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -89,10 +103,9 @@
         </div>
     </div>
 </div>
-<button onclick=" Imprimir()">Imprimir</button>
   </table>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>    
-    <script src="js/PDF.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>   
+    <script src="js/logica.js"></script>
     <script src="js/jspdf.min.js"></script>
     <script src="js/jspdf.plugin.autotable.js"></script>
 </body>
